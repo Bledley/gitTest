@@ -17,4 +17,16 @@ public class HomePageSteps {
 
     @Step
     public void submitLogin() {homepage.submitLoginbtn.click();}
+
+    @Step
+    public void clicknewReprisitorybtn() {homepage.newReprisitorybtn.click();}
+
+    @Step
+    public void enterReprisitoryname(String newReprisitoryname) {homepage.reprisitoryNamefield.setValue(newReprisitoryname);}
+
+    @Step
+    public void enterReprisitorydesc (String reprisitorydesc) {homepage.preprisitoryDescriptionfield.setValue(reprisitorydesc);}
+
+    @Step
+    public void clicksubmitReprisitorybtn() {homepage.submitReprisitory.click();}
 }

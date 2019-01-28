@@ -1,0 +1,30 @@
+package steps;
+
+import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
+import pages.ProfilePage;
+
+public class ProfilePageSteps {
+    private ProfilePage profilePage = new ProfilePage();
+
+    @Step
+    public void clickDropdownbtn() {profilePage.profileDropdown.click();}
+
+    @Step
+    public void clickReprisitoriesbtn() {profilePage.reprisitoriesbtn.click();}
+
+    @Step
+    public void clickEmojibtn() {profilePage.setEmojibtn.click();}
+
+    @Step
+    public void seeDialog1() {profilePage.editStatusDialog.shouldBe(Condition.visible);}
+
+    @Step
+    public void setEmojinew() {profilePage.wokringFromHomebtn.shouldBe(Condition.visible).click();}
+
+   // @Step
+   // public void seeDialog2() {profilePage.submitDialog.shouldHave(Condition.visible);}
+
+    @Step
+    public void submitEmoji() {profilePage.setStatusbtn.click();}
+}

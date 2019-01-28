@@ -3,6 +3,8 @@ package pages;
 import static com.codeborne.selenide.Selenide.open;
 import org.junit.jupiter.api.Test;
 import steps.HomePageSteps;
+import org.junit.Before;
+
 
 public class HomePageTest {
 
@@ -13,6 +15,7 @@ private HomePageSteps homePageSteps = new HomePageSteps();
 String login = ("bledley123@gmail.com");
 String password = ("ydyzapuhy635046");
 String newReprisitoryname = ("testReprisitory1");
+String reprisitorydesc = ("testDesc");
 
 @Test
     public void loginTest() {
@@ -32,6 +35,7 @@ String newReprisitoryname = ("testReprisitory1");
     homePageSteps.submitLogin();
     homePageSteps.clicknewReprisitorybtn();
     homePageSteps.enterReprisitoryname(newReprisitoryname);
+    homePageSteps.enterReprisitorydesc(reprisitorydesc);
     homePageSteps.clicksubmitReprisitorybtn();}
 
 }
