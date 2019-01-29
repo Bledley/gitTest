@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selectors.byText;
 
 public class ProfilePage {
     public SelenideElement profileDropdown = $(xpath("//span[@class='dropdown-caret']"));
-    public SelenideElement reprisitoriesbtn = $(xpath("(//a[@href='/Bledley?tab=repositories'])[1]"));
+    public SelenideElement reprisitoriesbtn = $(xpath("(//a[@href='/BledleyTest?tab=repositories'])[1]"));
    public SelenideElement setEmojibtn = $(xpath("//div[@class='user-status-emoji-container flex-shrink-0 ']"));
   public SelenideElement editStatusDialog = $(xpath("(//form[@class='position-relative flex-auto js-user-status-form'])[2]"));
    public SelenideElement wokringFromHomebtn = $(xpath("(//button[@class='d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1'])[8]"));

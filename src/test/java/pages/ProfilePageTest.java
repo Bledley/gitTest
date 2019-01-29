@@ -16,8 +16,8 @@ public class ProfilePageTest {
     private HomePageSteps homePageSteps = new HomePageSteps();
     private ProfilePageSteps profilePageSteps = new ProfilePageSteps();
 
-    String login = ("bledley123@gmail.com");
-    String password = ("ydyzapuhy635046");
+    String login = ("artem4eu@gmail.com");
+    String password = ("QweZxcAsd123");
 
 
     @Test
