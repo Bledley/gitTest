@@ -27,4 +27,17 @@ public class ProfilePageSteps {
 
     @Step
     public void submitEmoji() {profilePage.setStatusbtn.click();}
+
+    @Step
+    public void clickOnActiveStatus() {profilePage.activeStatus.click();}
+
+    @Step
+    public void resetStatusDialoge() {profilePage.resetStatusDialog.shouldBe(Condition.visible);}
+
+    @Step
+    public void clickResetStatusbtn() {profilePage.resetStatusbtn.click();}
+
+
+    @Step
+    public void resetEmoji() {profilePage.resetStatusbtn.click();}
 }

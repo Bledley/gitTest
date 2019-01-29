@@ -21,5 +21,8 @@ public class ProfilePage {
    //public SelenideElement setEmoji = $(xpath("//div[@class='d-flex flex-items-center no-underline js-predefined-user-status-message']"));
     public SelenideElement submitDialog = $(xpath("(((//form[@class='position-relative flex-auto js-user-status-form'])[2]"));
    public SelenideElement setStatusbtn = $(xpath("(//button[@class='width-full btn btn-primary mr-2 js-user-status-submit'])[2]"));
+   public SelenideElement activeStatus = $(xpath("//div[@class=' user-status-message-wrapper f6 lh-condensed ws-normal pt-3']"));
+   public SelenideElement resetStatusDialog = $ (xpath("(//form[@class='position-relative flex-auto js-user-status-form'])[2]"));
+   public SelenideElement resetStatusbtn = $(xpath("(//button[@class='width-full js-clear-user-status-button btn ml-2 js-user-status-exists'])[2]"));
         }
 

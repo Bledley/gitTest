@@ -36,4 +36,20 @@ public class ProfilePageTest {
        // profilePageSteps.seeDialog2();
         profilePageSteps.submitEmoji();
     }
+
+    @Test
+    public void ResetEmojiTest() {
+        open(url);
+        homePageSteps.clickSigninbtn();
+        homePageSteps.enterLogin(login);
+        homePageSteps.enterPass(password);
+        homePageSteps.submitLogin();
+        profilePageSteps.clickDropdownbtn();
+        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickOnActiveStatus();
+        profilePageSteps.resetStatusDialoge();
+        profilePageSteps.clickResetStatusbtn();
+
+    }
 }
+
