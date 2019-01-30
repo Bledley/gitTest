@@ -38,6 +38,6 @@ public class ProfilePageSteps {
     public void clickResetStatusbtn() {profilePage.resetStatusbtn.click();}
 
 
-    @Step
-    public void resetEmoji() {profilePage.resetStatusbtn.click();}
+  /*  @Step
+    public void resetEmoji() {profilePage.resetStatusbtn.click();}*/
 }
