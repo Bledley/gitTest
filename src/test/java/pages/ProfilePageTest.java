@@ -42,7 +42,6 @@ public class ProfilePageTest {
         profilePageSteps.submitEmoji();
         profilePageSteps.clickDropdownbtn();
         profilePageSteps.clickReposbtn();
-        String statusAfter =
     }
 
     @Test
