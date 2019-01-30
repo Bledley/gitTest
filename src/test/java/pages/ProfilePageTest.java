@@ -7,14 +7,16 @@ import org.joda.time.Seconds;
 import org.junit.jupiter.api.Test;
 import steps.HomePageSteps;
 import steps.ProfilePageSteps;
-
+import pages.ProfilePage;
 
 public class ProfilePageTest {
 
     private final String url = ("https://github.com/");
 
+    private ProfilePage profilePage = new ProfilePage();
     private HomePageSteps homePageSteps = new HomePageSteps();
     private ProfilePageSteps profilePageSteps = new ProfilePageSteps();
+
 
     String login = ("artem4eu@gmail.com");
     String password = ("QweZxcAsd123");
@@ -28,13 +30,19 @@ public class ProfilePageTest {
         homePageSteps.enterPass(password);
         homePageSteps.submitLogin();
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
+        String statusCheck = profilePage.noStatus.text();
+        profilePageSteps.noStatuscheck();
+        System.out.println("Your status is" + statusCheck);
         profilePageSteps.clickEmojibtn();
        // sleep(1000);
         profilePageSteps.seeDialog1();
         profilePageSteps.setEmojinew();
        // profilePageSteps.seeDialog2();
         profilePageSteps.submitEmoji();
+        profilePageSteps.clickDropdownbtn();
+        profilePageSteps.clickReposbtn();
+        String statusAfter =
     }
 
     @Test
@@ -45,7 +53,8 @@ public class ProfilePageTest {
         homePageSteps.enterPass(password);
         homePageSteps.submitLogin();
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
+        String statusCheck = profilePage.noStatus.text();
         profilePageSteps.clickOnActiveStatus();
         profilePageSteps.resetStatusDialoge();
         profilePageSteps.clickResetStatusbtn();

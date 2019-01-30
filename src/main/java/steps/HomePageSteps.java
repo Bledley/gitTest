@@ -28,35 +28,35 @@ public class HomePageSteps {
     public void repoListSizeResult(int sizeAfter) {homepage.repoList.shouldHaveSize(sizeAfter);}
 
     @Step
-    public void clicknewReprisitorybtn() {homepage.newReprisitorybtn.click();}
+    public void clicknewRepobtn() {homepage.newRepobtn.click();}
 
     @Step
-    public void enterReprisitoryname(String newReprisitoryname) {homepage.reprisitoryNamefield.setValue(newReprisitoryname);}
+    public void enterReponame(String newReponame) {homepage.repoNamefield.setValue(newReponame);}
 
     @Step
-    public void enterReprisitorydesc (String reprisitorydesc) {homepage.preprisitoryDescriptionfield.setValue(reprisitorydesc);}
+    public void enterRepodesc (String reprisitorydesc) {homepage.repoDescriptionfield.setValue(reprisitorydesc);}
 
     @Step
-    public void clicksubmitReprisitorybtn() {homepage.submitReprisitory.click();}
+    public void clicksubmitRepobtn() {homepage.submitRepo.click();}
 
     @Step
-    public void cliconCreatedReprisitory() {homepage.createdReprisitory.toWebElement().click();}
+    public void cliconCreatedRepo() {homepage.createdRepo.toWebElement().click();}
 
     @Step
     public void clickonSettingsbtn() {homepage.settingsbtn.shouldBe(Condition.visible).toWebElement().click();}
 
     @Step
-    public void deleteReprisitory() {homepage.deleteReprisitorybtn.shouldBe(Condition.visible).toWebElement().click();}
+    public void deleteRepo() {homepage.deleteRepobtn.shouldBe(Condition.visible).toWebElement().click();}
 
     @Step
-    public void deleteReprisidoryDialog() {homepage.deleteReprisitoryDialog.shouldBe(Condition.visible);}
+    public void deleteRepoDialog() {homepage.deleteRepoDialog.shouldBe(Condition.visible);}
 
     @Step
-    public void setReprisitoryNameToDelete(String newReprisitoryname) {homepage.setReprisitoryName.setValue(newReprisitoryname);}
+    public void setRepoNameToDelete(String newReponame) {homepage.setRepoName.setValue(newReponame);}
 
     @Step
-    public void clickonsubmitReprisitorydelete() {homepage.submitReprisitorydelete.click();}
+    public void clickonsubmitRepodelete() {homepage.submitRepodelete.click();}
 
     @Step
-    public void createdReprisitoryNotvis() {homepage.createdReprisitory.shouldNotBe(Condition.visible);}
+    public void createdRepoNotvis() {homepage.createdRepo.shouldNotBe(Condition.visible);}
 }

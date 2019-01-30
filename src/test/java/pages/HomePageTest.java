@@ -1,17 +1,10 @@
 package pages;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import org.openqa.selenium.WebDriver;
-import com.codeborne.selenide.Configuration;
+
 import org.junit.jupiter.api.Test;
-import org.junit.rules.Timeout;
-import org.openqa.selenium.WebDriver;
 import steps.HomePageSteps;
-import org.junit.Before;
 import steps.ProfilePageSteps;
-import pages.HomePage;
 
 
 public class HomePageTest {
@@ -25,7 +18,7 @@ private HomePage homePage = new HomePage();
 
 String login = ("artem4eu@gmail.com");
 String password = ("QweZxcAsd123");
-String newReprisitoryname = ("testReprisitory1");
+String newReprisitoryname = ("testRepo1");
 String reprisitorydesc = ("testDesc");
 
 
@@ -39,49 +32,49 @@ String reprisitorydesc = ("testDesc");
     homePageSteps.submitLogin(); }
 
     @Test
-    public void createnewReprisitory() {
+    public void createnewRepository() {
         open(url);
         homePageSteps.clickSigninbtn();
         homePageSteps.enterLogin(login);
         homePageSteps.enterPass(password);
         homePageSteps.submitLogin();
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
         int listSize = homePage.repoList.size();
         homePageSteps.repoListSize();
         System.out.println("Page has" +listSize +"repositories");
         //homePageSteps.repoListSize(listSize);
-        homePageSteps.clicknewReprisitorybtn();
-        homePageSteps.enterReprisitoryname(newReprisitoryname);
-        homePageSteps.enterReprisitorydesc(reprisitorydesc);
-        homePageSteps.clicksubmitReprisitorybtn();
+        homePageSteps.clicknewRepobtn();
+        homePageSteps.enterReponame(newReprisitoryname);
+        homePageSteps.enterRepodesc(reprisitorydesc);
+        homePageSteps.clicksubmitRepobtn();
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
         int sizeAfter = listSize +1;
         homePageSteps.repoListSizeResult(sizeAfter);
         System.out.println("Page has " + sizeAfter + "repositories"); }
 
     @Test
-    public void deletecreatedReprisitory() {
+    public void deletecreatedRepository() {
         open(url);
         homePageSteps.clickSigninbtn();
         homePageSteps.enterLogin(login);
         homePageSteps.enterPass(password);
         homePageSteps.submitLogin();
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
         int listSize = homePage.repoList.size();
         homePageSteps.repoListSize();
         System.out.println("Page has" +listSize +"repositories");
-        homePageSteps.cliconCreatedReprisitory();
+        homePageSteps.cliconCreatedRepo();
         homePageSteps.clickonSettingsbtn();
-        homePageSteps.deleteReprisitory();
-        homePageSteps.deleteReprisidoryDialog();
-        homePageSteps.setReprisitoryNameToDelete(newReprisitoryname);
-        homePageSteps.clickonsubmitReprisitorydelete();
+        homePageSteps.deleteRepo();
+        homePageSteps.deleteRepoDialog();
+        homePageSteps.setRepoNameToDelete(newReprisitoryname);
+        homePageSteps.clickonsubmitRepodelete();
         //Check if reprisitory is deleted
         profilePageSteps.clickDropdownbtn();
-        profilePageSteps.clickReprisitoriesbtn();
+        profilePageSteps.clickReposbtn();
         int sizeAfter = listSize -1;
         homePageSteps.repoListSizeResult(sizeAfter);
         System.out.println("Page has " + sizeAfter + "repositories");}

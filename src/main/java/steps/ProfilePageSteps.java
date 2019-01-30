@@ -11,7 +11,10 @@ public class ProfilePageSteps {
     public void clickDropdownbtn() {profilePage.profileDropdown.click();}
 
     @Step
-    public void clickReprisitoriesbtn() {profilePage.reprisitoriesbtn.click();}
+    public void clickReposbtn() {profilePage.reposbtn.click();}
+
+    @Step
+    public void noStatuscheck() {profilePage.noStatus.text();}
 
     @Step
     public void clickEmojibtn() {profilePage.setEmojibtn.click();}
@@ -20,7 +23,7 @@ public class ProfilePageSteps {
     public void seeDialog1() {profilePage.editStatusDialog.shouldBe(Condition.visible);}
 
     @Step
-    public void setEmojinew() {profilePage.wokringFromHomebtn.shouldBe(Condition.visible).click();}
+    public void setEmojinew() {profilePage.focusingbtn.shouldBe(Condition.visible).click();}
 
    // @Step
    // public void seeDialog2() {profilePage.submitDialog.shouldHave(Condition.visible);}
