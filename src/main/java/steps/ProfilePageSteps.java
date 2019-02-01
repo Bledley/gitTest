@@ -14,7 +14,7 @@ public class ProfilePageSteps {
     public void clickReposbtn() {profilePage.reposbtn.click();}
 
     @Step
-    public void noStatuscheck() {profilePage.noStatus.text();}
+    public void noStatuscheck() {profilePage.noStatus.shouldHave(Condition.text("Set your status"));}
 
     @Step
     public void clickEmojibtn() {profilePage.setEmojibtn.click();}
@@ -32,7 +32,10 @@ public class ProfilePageSteps {
     public void submitEmoji() {profilePage.setStatusbtn.click();}
 
     @Step
-    public void clickOnActiveStatus() {profilePage.activeStatus.click();}
+    public void statusAFterCheck() {profilePage.statusAfter.shouldHave(Condition.text("Focusing"));}
+
+    @Step
+    public void clickOnActiveStatus() {profilePage.activeStatusbtn.click();}
 
     @Step
     public void resetStatusDialoge() {profilePage.resetStatusDialog.shouldBe(Condition.visible);}
